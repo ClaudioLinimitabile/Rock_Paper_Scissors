@@ -8,3 +8,6 @@ this code is suppose to show my attempt at doing a rock paper scissors game show
 for the odin project
 
 i added some css just to put some dark back ground to prevent eye burning
+
+
+update:did use event lissener to put a UI to the game
