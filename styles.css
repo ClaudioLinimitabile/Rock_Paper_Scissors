@@ -1,3 +1,22 @@
 *{
     background-color: darkslategray;
 }
+
+button{
+    color: white;
+    background-color: brown;
+}
+
+h1{
+    background-color: brown;
+    width: 600px;
+    margin-left: 600px;
+    text-align: center;
+    border: 10px solid black;
+    color: white;
+}
+
+.BUTTONS{
+    margin-left: 800px;
+    margin-top: 310px;
+}
