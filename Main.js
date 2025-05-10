@@ -2,6 +2,7 @@
 //note: my written english is realy poor so i'm sorry in advance this is not my main language
 //many things i did may not be the most efficent way to do this project but for now is my best shot
 
+const STATESHOW = document.querySelector(".STATE");
 
 //this return a random number based from the max range given(in this code we will use 3 so the range goes from 0 to 2 that is exactly the number needed)
 function getComputerChoice(max){
@@ -13,33 +14,8 @@ function PlayRound(x){
     let comp = getComputerChoice(3);
     let human=x;
 
-    //this will contain string for visual purpose
-    let LITERATEcomp;
-    let LITERATEhuman;
-
     let humanScore=0;
     let computerScore=0;
-
-    let state;
-    
-
-    //valutating comp number
-    if(comp==0){
-        LITERATEcomp="ROCK";
-    }else if(comp==1){
-        LITERATEcomp="PAPER";
-    }else if(comp==2){
-        LITERATEcomp="SCISSORS";
-    }
-                                    //all of this is just for console visual purpose
-    //valutating human number
-    if(human==0){
-        LITERATEhuman="ROCK";
-    }else if(human==1){
-        LITERATEhuman="PAPER";
-    }else if(human==2){
-        LITERATEhuman="SCISSORS";
-    }
 
     //adding score based on game rule
     if(comp==human){
@@ -65,18 +41,14 @@ function PlayRound(x){
         computerScore=computerScore+1;
     }
 
-    //giving insight of what is appening
-    console.log("human did:"+LITERATEhuman);
-    console.log("computer did:"+LITERATEcomp);
-
     //updating state of the game
     if(humanScore>computerScore){
-        state="Human WINS!";
+        STATESHOW.setAttribute("style","color: white;");
+        STATESHOW.textContent="Human WINS!";
     }else{
-        state="Computer WINS";
+        STATESHOW.setAttribute("style","color: white;");
+        STATESHOW.textContent="Computer WINS!";
     }
-
-    console.log(state);
     
 }
 
